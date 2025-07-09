@@ -328,8 +328,8 @@ export default function Header({
   }, [formData, liveSettings, schema, theme, uiSchema, validator, setShareURL]);
 
   return (
-    <div className='page-header'>
-      <h1>react-jsonschema-form</h1>
+    <div className='page-header hidden'>
+      <h1>Config Editor</h1>
       <div className='row'>
         <div className='col-sm-4'>
           <SampleSelector onSelected={onSampleSelected} selectedSample={sampleName} />

@@ -17,7 +17,7 @@ export default function AddButton<T = any, S extends StrictRJSFSchema = RJSFSche
         <IconButton
           iconType='info'
           icon='plus'
-          className='btn-add col-xs-12'
+          className='btn-add'
           title={translateString(TranslatableString.AddButton)}
           onClick={onClick}
           disabled={disabled}

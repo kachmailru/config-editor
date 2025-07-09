@@ -127,7 +127,7 @@ export default function Editors({
   const uiSchemaTitle = hasUiSchemaGenerator ? 'UISchema (regenerated on theme change)' : 'UiSchema';
 
   return (
-    <div className='col-sm-7'>
+    <div className='col-sm-12 hidden'>
       <Editor title='JSONSchema' code={toJson(schema)} onChange={onSchemaEdited} />
       <div className='row'>
         <div className='col-sm-6'>

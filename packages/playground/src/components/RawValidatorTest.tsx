@@ -24,8 +24,8 @@ export default function RawValidatorTest({ validator, schema, formData }: RawVal
       <details style={{ marginBottom: '10px' }}>
         <summary style={{ display: 'list-item' }}>Raw Ajv Validation</summary>
         To determine whether a validation issue is really a BUG in Ajv use the button to trigger the raw Ajv validation.
-        This will run your schema and formData through Ajv without involving any react-jsonschema-form specific code. If
-        there is an unexpected error, then{' '}
+        This will run your schema and formData through Ajv without involving any config-editor specific code. If there
+        is an unexpected error, then{' '}
         <a href='https://github.com/ajv-validator/ajv/issues/new/choose' target='_blank' rel='noreferrer'>
           file an issue
         </a>{' '}

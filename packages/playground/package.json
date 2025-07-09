@@ -98,12 +98,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjsf-team/react-jsonschema-form.git"
+    "url": "git+https://github.com/kachmailru/config-editor.git"
   },
-  "author": "Nicolas Perriault <nperriault@mozilla.com>",
-  "contributors": [
-    "Heath Chiavettone <heath.chiavettone@freenome.com"
-  ],
+  "author": "k.chechetkin <k.chechetkin@flowlu.com>",
+  "contributors": [],
   "keywords": [
     "react",
     "react 17",
@@ -111,7 +109,7 @@
     "json-schema"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/rjsf-team/react-jsonschema-form",
+  "homepage": "https://github.com/kachmailru/config-editor",
   "publishConfig": {
     "access": "public"
   }

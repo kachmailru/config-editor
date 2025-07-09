@@ -21,15 +21,15 @@ export interface PlaygroundProps {
 
 export default function Playground({ themes, validators }: PlaygroundProps) {
   const [loaded, setLoaded] = useState(false);
-  const [schema, setSchema] = useState<RJSFSchema>(samples.Simple.schema as RJSFSchema);
-  const [uiSchema, setUiSchema] = useState<UiSchema>(samples.Simple.uiSchema!);
+  const [schema, setSchema] = useState<RJSFSchema>(samples.Blank.schema as RJSFSchema);
+  const [uiSchema, setUiSchema] = useState<UiSchema>(samples.Blank.uiSchema!);
   // Store the generator inside of an object, otherwise react treats it as an initializer function
   const [uiSchemaGenerator, setUiSchemaGenerator] = useState<{ generator: UiSchemaForTheme } | undefined>(undefined);
-  const [formData, setFormData] = useState<any>(samples.Simple.formData);
+  const [formData, setFormData] = useState<any>(samples.Blank.formData);
   const [extraErrors, setExtraErrors] = useState<ErrorSchema | undefined>();
   const [shareURL, setShareURL] = useState<string | null>(null);
   const [theme, setTheme] = useState<string>('default');
-  const [sampleName, setSampleName] = useState<string>('Simple');
+  const [sampleName, setSampleName] = useState<string>('Blank');
   const [subtheme, setSubtheme] = useState<string | null>(null);
   const [stylesheet, setStylesheet] = useState<string | null>(null);
   const [validator, setValidator] = useState<string>('AJV8');
@@ -200,13 +200,14 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
         setShareURL={setShareURL}
         hasUiSchemaGenerator={!!uiSchemaGenerator}
       />
-      <div className='col-sm-5'>
+      <div className='col-sm-12'>
         <ErrorBoundary>
           {showForm && (
             <DemoFrame
               head={
                 <>
                   <link rel='stylesheet' id='theme' href={stylesheet || ''} />
+                  <link rel='stylesheet' id='theme' href='/src/custom.css' />
                 </>
               }
               style={{
