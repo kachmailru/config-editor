@@ -207,7 +207,7 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
               head={
                 <>
                   <link rel='stylesheet' id='theme' href={stylesheet || ''} />
-                  <link rel='stylesheet' id='theme' href='/src/custom.css' />
+                  <link rel='stylesheet' id='theme' href='/assets/custom.css' />
                 </>
               }
               style={{
