@@ -155,14 +155,13 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
 
       setFormData(formData);
       setShareURL(null);
+      window.parent.postMessage({ event: 'onFormDataChange', data: formData }, '*');
     },
     [setFormData, setShareURL],
   );
 
   const onFormDataSubmit = useCallback(({ formData }: IChangeEvent, event: FormEvent<any>) => {
-    console.log('submitted formData', formData);
-    console.log('submit event', event);
-    window.alert('Form submitted');
+    window.parent.postMessage({ event: 'onFormDataSubmit', data: formData }, '*');
   }, []);
 
   return (
@@ -207,7 +206,7 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
               head={
                 <>
                   <link rel='stylesheet' id='theme' href={stylesheet || ''} />
-                  <link rel='stylesheet' id='theme' href='/assets/custom.css' />
+                  <link rel='stylesheet' id='theme' href='./assets/custom.css' />
                 </>
               }
               style={{
