@@ -211,7 +211,7 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
               }
               style={{
                 width: '100%',
-                height: 1000,
+                height: '99vh',
                 border: 0,
               }}
               theme={theme}
